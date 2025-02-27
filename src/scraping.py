@@ -1,6 +1,5 @@
-import pyperclip
-from PIL import Image
-from io import BytesIO
+import pyautogui
 
-def get_image_from_clipboard():
-    ...
+def take_screenshot():
+    image = pyautogui.screenshot("image.png")
+    return image

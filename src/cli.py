@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from .llm import get_models
+from .llm import get_models, set_model
 from .settings.settings import set_property, get_property
 
 import argparse
@@ -56,8 +56,7 @@ def init_session(model):
         
     print(f'Initiating session: {model}')
 
-    # test
-    print(ollama.generate(model=model, prompt='Who are you?').__getitem__('response'))
+    set_model(model)
 
 if __name__ == '__main__':
     main()
