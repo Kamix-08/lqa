@@ -1,3 +1,5 @@
+from .settings.settings import get_property
+
 import ollama
 
 model = None
@@ -20,4 +22,7 @@ def strip_answer(answer:str) -> str:
     return answer[answer.find(pattern)+len(pattern):]
 
 def get_response(prompt: str) -> str:
-    return ollama.generate(model=model, prompt=prompt).__getitem__('response')
+    return ollama.chat(model=model, messages=[
+        {"role": "system", "content": get_property('prompt')},
+        {"role": "user", "content": prompt}
+    ], stream=False)['message']['content']

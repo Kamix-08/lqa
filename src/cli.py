@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 from .llm import get_models, set_model
 from .settings.settings import set_property, get_property
+from .hotkey import main as hotkey_main
 
 import argparse
 import ollama
+import keyboard
 
 def main():
     parser = argparse.ArgumentParser(description='LQA - Local Quick Assistant')
@@ -57,6 +59,9 @@ def init_session(model):
     print(f'Initiating session: {model}')
 
     set_model(model)
+    hotkey_main()
+
+    keyboard.wait('esc')
 
 if __name__ == '__main__':
     main()

@@ -10,7 +10,7 @@ def load_config():
     with open('data.json', 'r') as f:
         config = json.load(f)
 
-def set_property(key:str, value:object):
+def set_property(key:str, value):
     global config
     load_config()
 
@@ -18,7 +18,7 @@ def set_property(key:str, value:object):
     with open('data.json', 'w') as f:
         json.dump(config, f)
 
-def get_property(key:str) -> object:
+def get_property(key:str):
     load_config()
 
     if not config.__contains__(key): # type: ignore
