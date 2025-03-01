@@ -18,6 +18,9 @@ def get_models() -> list[str]:
     return models_names
 
 def strip_answer(answer:str) -> str:
+    if get_property('show_thoughts'):
+        return answer
+
     pattern = '</think>'
     return answer[answer.find(pattern)+len(pattern):]
 

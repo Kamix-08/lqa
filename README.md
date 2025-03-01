@@ -45,10 +45,12 @@ options:
 
 Available configuration options:
 
-| Option     | Description                   | Default                                |
-| ---------- | ----------------------------- | -------------------------------------- |
-| `hotkey_1` | The hotkey to trigger the OCR | `ctrl+windows+1`                       |
-| `prompt`   | The system prompt for the LLM | _Available in the default JSON config_ |
+| Option          | Description                                      | Default                                |
+| --------------- | ------------------------------------------------ | -------------------------------------- |
+| `hotkey_1`      | Capture the whole screen                         | `ctrl+windows+1`                       |
+| `hotkey_2`      | Capture the region between last two mouse clicks | `ctrl+windows+2`                       |
+| `show_thoughts` | Show the thought process of the LLM model        | `False`                                |
+| `prompt`        | The system prompt for the LLM                    | _Available in the default JSON config_ |
 
 ## Examples
 
@@ -59,7 +61,7 @@ lqa -m deepseek-r1:14b
 This will check for the DeepSeek-R1:14B model. If it doesn't exist, you will get prompted to pull it from Ollama.
 
 ```bash
-lqa --config hotkey_1 ctrl+windows+2
+lqa --config hotkey_1 ctrl+windows+0
 ```
 
-This will change the hotkey to `ctrl+windows+2`. The config is being saved within the program.
+This will change the hotkey to `ctrl+windows+0`. The config is being saved within the program.
