@@ -1,10 +1,10 @@
 [project]
 name = "lqa"
-version = "1.0.0"
+version = "1.1.1"
 
 [project.scripts]
 lqa = "src.cli:main"
 
 [tool.setuptools]
-packages = ["src"]
 include-package-data = true
+packages = ["src"]

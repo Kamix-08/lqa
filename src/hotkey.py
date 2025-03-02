@@ -32,7 +32,8 @@ def on_hk_2():
     if len(coordinates) < 2:
         return
 
-    image = take_screenshot((coordinates[-2][0], coordinates[-2][1], coordinates[-1][0], coordinates[-1][1]))
+    image = take_screenshot((coordinates[-2][0], coordinates[-2][1], 
+                             coordinates[-1][0] - coordinates[-2][0], coordinates[-1][1] - coordinates[-2][1]))
     pipeline(image)
     
     coordinates.clear()

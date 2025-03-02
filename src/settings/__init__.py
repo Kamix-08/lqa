@@ -19,3 +19,6 @@ def main():
         for key, value in config.items():
             if not data.__contains__(key):
                 data[key] = value
+
+    with open('data.json', 'w') as f:
+        json.dump(data, f)

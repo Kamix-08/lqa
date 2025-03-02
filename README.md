@@ -47,8 +47,8 @@ Available configuration options:
 
 | Option          | Description                                      | Default                                |
 | --------------- | ------------------------------------------------ | -------------------------------------- |
-| `hotkey_1`      | Capture the whole screen                         | `ctrl+windows+1`                       |
-| `hotkey_2`      | Capture the region between last two mouse clicks | `ctrl+windows+2`                       |
+| `hotkey_1`      | Capture the whole screen                         | `ctrl+shift+1`                         |
+| `hotkey_2`      | Capture the region between last two mouse clicks | `ctrl+shift+2`                         |
 | `show_thoughts` | Show the thought process of the LLM model        | `False`                                |
 | `prompt`        | The system prompt for the LLM                    | _Available in the default JSON config_ |
 
