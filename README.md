@@ -45,12 +45,12 @@ options:
 
 Available configuration options:
 
-| Option          | Description                                      | Default                                |
-| --------------- | ------------------------------------------------ | -------------------------------------- |
-| `hotkey_1`      | Capture the whole screen                         | `ctrl+shift+1`                         |
-| `hotkey_2`      | Capture the region between last two mouse clicks | `ctrl+shift+2`                         |
-| `show_thoughts` | Show the thought process of the LLM model        | `False`                                |
-| `prompt`        | The system prompt for the LLM                    | _Available in the default JSON config_ |
+| Option          | Description                                      | Type                           | Default                                |
+| --------------- | ------------------------------------------------ | ------------------------------ | -------------------------------------- |
+| `hotkey_1`      | Capture the whole screen                         | `string` _(`_ParsableHotkey`)_ | `ctrl+shift+1`                         |
+| `hotkey_2`      | Capture the region between last two mouse clicks | `string` _(`_ParsableHotkey`)_ | `ctrl+shift+2`                         |
+| `show_thoughts` | Show the thought process of the LLM model        | `bool`                         | `False`                                |
+| `prompt`        | The system prompt for the LLM                    | `string`                       | _Available in the default JSON config_ |
 
 ## Examples
 
