@@ -35,7 +35,7 @@ def on_hk_2():
     if coordinates[-1] < coordinates[-2]:
         coordinates[-2], coordinates[-1] = coordinates[-1], coordinates[-2]
 
-    image = take_screenshot((max(coordinates[-2][0], coordinates[-1][0]), max(coordinates[-2][1], coordinates[-1][1]), 
+    image = take_screenshot((min(coordinates[-2][0], coordinates[-1][0]), min(coordinates[-2][1], coordinates[-1][1]), 
                              abs(coordinates[-1][0] - coordinates[-2][0]), abs(coordinates[-1][1] - coordinates[-2][1])))
     pipeline(image)
     
